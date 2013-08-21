@@ -1,11 +1,8 @@
 Overview
 ========================
 
-About
-------------------------
-
 The above code was generated using [wsimport](http://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html) using the [Marketo Web Service 2_1 WSDL](http://app.marketo.net/soap/mktows/2_1?WSDL).
-You can find [binding.xml](binding.xml) here.
+Here is the [binding.xml](binding.xml) file used in the below wsimport command.
 
 ```
 $ mkdir src
