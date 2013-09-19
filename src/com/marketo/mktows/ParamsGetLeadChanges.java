@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="startPosition" type="{http://www.marketo.com/mktows/}StreamPosition"/>
  *         &lt;element name="activityFilter" type="{http://www.marketo.com/mktows/}ActivityTypeFilter" minOccurs="0"/>
  *         &lt;element name="batchSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="leadSelector" type="{http://www.marketo.com/mktows/}LeadSelector" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +36,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ParamsGetLeadChanges", propOrder = {
     "startPosition",
     "activityFilter",
-    "batchSize"
+    "batchSize",
+    "leadSelector"
 })
 @XmlRootElement(name = "paramsGetLeadChanges")
 public class ParamsGetLeadChanges {
@@ -46,6 +48,7 @@ public class ParamsGetLeadChanges {
     protected JAXBElement<ActivityTypeFilter> activityFilter;
     @XmlElementRef(name = "batchSize", type = JAXBElement.class)
     protected JAXBElement<Integer> batchSize;
+    protected LeadSelector leadSelector;
 
     /**
      * Gets the value of the startPosition property.
@@ -117,6 +120,30 @@ public class ParamsGetLeadChanges {
      */
     public void setBatchSize(JAXBElement<Integer> value) {
         this.batchSize = ((JAXBElement<Integer> ) value);
+    }
+
+    /**
+     * Gets the value of the leadSelector property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link LeadSelector }
+     *     
+     */
+    public LeadSelector getLeadSelector() {
+        return leadSelector;
+    }
+
+    /**
+     * Sets the value of the leadSelector property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link LeadSelector }
+     *     
+     */
+    public void setLeadSelector(LeadSelector value) {
+        this.leadSelector = value;
     }
 
 }
