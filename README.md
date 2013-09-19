@@ -4,7 +4,7 @@ Getting Started
 The fastest way to implement a SOAP client is to start with the sample code that we have made available here and
 modify it for your purposes.  These client stubs have to be in the build path of your Java projects.
 
-If using the pre-built jar file [marketo-soap-sdk-2.1.jar](marketo-soap-sdk-2.1.jar), you can add it to your build
+If using the pre-built jar file [marketo-soap-sdk-2.2.jar](marketo-soap-sdk-2.2.jar), you can add it to your build
 path by placing it inside your Java project in eclipse (or the IDE of your choice).  In Eclipse, you would right
 click on the library, click the "Build Path -> Configure Build Path ..." option from the menu.  In the modal dialog
 that will popup, you can add the library to the path by clicking on the "Add JARs..." button and selecting the JAR
@@ -15,13 +15,13 @@ Repeat the above steps to include commons-codec-1.8.jar to your project before r
 
 Generate Your Own Java Client From WSDL
 ------------------------
-The above code was generated using [wsimport](http://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html) using the [Marketo Web Service 2_1 WSDL](http://app.marketo.net/soap/mktows/2_1?WSDL).
+The above code was generated using [wsimport](http://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html) using the [Marketo Web Service 2_2 WSDL](http://app.marketo.net/soap/mktows/2_2?WSDL).
 Here is the [binding.xml](binding.xml) file used in the below wsimport command.
 
 ```
 $ mkdir src
 $ mkdir bin
-$ wsimport -XadditionalHeaders -b binding.xml -p com.marketo.mktows -s src -d bin http://app.marketo.net/soap/mktows/2_1?WSDL
+$ wsimport -XadditionalHeaders -b binding.xml -p com.marketo.mktows -s src -d bin http://app.marketo.net/soap/mktows/2_2?WSDL
 ```
 
 Usage
@@ -98,4 +98,4 @@ public class GetLead {
 Compatibility
 ------------------------
 
-This code was generated from the Marketo SOAP WSDL version 2_1.
+This code was generated from the Marketo SOAP WSDL version 2_2.
