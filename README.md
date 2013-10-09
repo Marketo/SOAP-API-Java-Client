@@ -26,7 +26,7 @@ $ wsimport -XadditionalHeaders -b binding.xml -p com.marketo.mktows -s src -d bi
 
 Usage
 ------------------------
-
+Complete Marketo SOAP API Documentation can be found at [http://developers.marketo.com/documentation/soap/](http://developers.marketo.com/documentation/soap/)
 ```java
 import com.marketo.mktows.*;
 import java.net.URL;
