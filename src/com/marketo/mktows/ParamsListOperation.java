@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="listKey" type="{http://www.marketo.com/mktows/}ListKey"/>
  *         &lt;element name="listMemberList" type="{http://www.marketo.com/mktows/}ArrayOfLeadKey"/>
  *         &lt;element name="strict" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="skipActivityLog" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,8 +37,7 @@ import javax.xml.bind.annotation.XmlType;
     "listOperation",
     "listKey",
     "listMemberList",
-    "strict",
-    "skipActivityLog"
+    "strict"
 })
 @XmlRootElement(name = "paramsListOperation")
 public class ParamsListOperation {
@@ -52,8 +50,6 @@ public class ParamsListOperation {
     protected ArrayOfLeadKey listMemberList;
     @XmlElementRef(name = "strict", type = JAXBElement.class)
     protected JAXBElement<Boolean> strict;
-    @XmlElementRef(name = "skipActivityLog", type = JAXBElement.class)
-    protected JAXBElement<Boolean> skipActivityLog;
 
     /**
      * Gets the value of the listOperation property.
@@ -149,30 +145,6 @@ public class ParamsListOperation {
      */
     public void setStrict(JAXBElement<Boolean> value) {
         this.strict = ((JAXBElement<Boolean> ) value);
-    }
-
-    /**
-     * Gets the value of the skipActivityLog property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-     *     
-     */
-    public JAXBElement<Boolean> getSkipActivityLog() {
-        return skipActivityLog;
-    }
-
-    /**
-     * Sets the value of the skipActivityLog property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link Boolean }{@code >}
-     *     
-     */
-    public void setSkipActivityLog(JAXBElement<Boolean> value) {
-        this.skipActivityLog = ((JAXBElement<Boolean> ) value);
     }
 
 }

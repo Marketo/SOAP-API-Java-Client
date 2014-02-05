@@ -14,7 +14,6 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;simpleType name="ListOperationType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *     &lt;enumeration value="ADDTOLIST"/>
- *     &lt;enumeration value="CLEARLIST"/>
  *     &lt;enumeration value="ISMEMBEROFLIST"/>
  *     &lt;enumeration value="REMOVEFROMLIST"/>
  *   &lt;/restriction>
@@ -27,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 public enum ListOperationType {
 
     ADDTOLIST,
-    CLEARLIST,
     ISMEMBEROFLIST,
     REMOVEFROMLIST;
 

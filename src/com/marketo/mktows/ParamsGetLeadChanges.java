@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="startPosition" type="{http://www.marketo.com/mktows/}StreamPosition"/>
  *         &lt;element name="activityFilter" type="{http://www.marketo.com/mktows/}ActivityTypeFilter" minOccurs="0"/>
+ *         &lt;element name="activityNameFilter" type="{http://www.marketo.com/mktows/}ArrayOfString" minOccurs="0"/>
  *         &lt;element name="batchSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="leadSelector" type="{http://www.marketo.com/mktows/}LeadSelector" minOccurs="0"/>
  *       &lt;/sequence>
@@ -36,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ParamsGetLeadChanges", propOrder = {
     "startPosition",
     "activityFilter",
+    "activityNameFilter",
     "batchSize",
     "leadSelector"
 })
@@ -46,6 +48,8 @@ public class ParamsGetLeadChanges {
     protected StreamPosition startPosition;
     @XmlElementRef(name = "activityFilter", type = JAXBElement.class)
     protected JAXBElement<ActivityTypeFilter> activityFilter;
+    @XmlElementRef(name = "activityNameFilter", type = JAXBElement.class)
+    protected JAXBElement<ArrayOfString> activityNameFilter;
     @XmlElementRef(name = "batchSize", type = JAXBElement.class)
     protected JAXBElement<Integer> batchSize;
     protected LeadSelector leadSelector;
@@ -96,6 +100,30 @@ public class ParamsGetLeadChanges {
      */
     public void setActivityFilter(JAXBElement<ActivityTypeFilter> value) {
         this.activityFilter = ((JAXBElement<ActivityTypeFilter> ) value);
+    }
+
+    /**
+     * Gets the value of the activityNameFilter property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link ArrayOfString }{@code >}
+     *     
+     */
+    public JAXBElement<ArrayOfString> getActivityNameFilter() {
+        return activityNameFilter;
+    }
+
+    /**
+     * Sets the value of the activityNameFilter property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link ArrayOfString }{@code >}
+     *     
+     */
+    public void setActivityNameFilter(JAXBElement<ArrayOfString> value) {
+        this.activityNameFilter = ((JAXBElement<ArrayOfString> ) value);
     }
 
     /**
