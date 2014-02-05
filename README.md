@@ -13,10 +13,13 @@ file from your project.
 The sample code below uses the Apache [commons-codec-1.8.jar](http://commons.apache.org/proper/commons-codec/download_codec.cgi).
 Repeat the above steps to include commons-codec-1.8.jar to your project before running the sample code.
 
+Complete Marketo SOAP API Documentation can be found at [http://developers.marketo.com/documentation/soap/](http://developers.marketo.com/documentation/soap/)
+
 Generate Your Own Java Client From WSDL
 ------------------------
 The above code was generated using [wsimport](http://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html) using the [Marketo Web Service 2_3 WSDL](http://app.marketo.net/soap/mktows/2_3?WSDL).
 Here is the [binding.xml](binding.xml) file used in the below wsimport command.
+
 
 ```
 $ mkdir src
