@@ -17,7 +17,7 @@ Complete Marketo SOAP API Documentation can be found at [http://developers.marke
 
 Generate Your Own Java Client From WSDL
 ------------------------
-The above code was generated using [wsimport](http://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html) using the [Marketo Web Service 2_7 WSDL](http://{YOUR MARKETO INSTANCE DOMAIN}/soap/mktows/2_7?WSDL).
+The above code was generated using [wsimport](http://docs.oracle.com/javase/6/docs/technotes/tools/share/wsimport.html) using the Marketo Web Service 2_7 WSDL.
 Here is the [binding.xml](binding.xml) file used in the below wsimport command.
 
 
@@ -101,4 +101,4 @@ public class GetLead {
 Compatibility
 ------------------------
 
-This code was generated from the Marketo SOAP WSDL version 2_3.
+This code was generated from the Marketo SOAP WSDL version 2_7.
