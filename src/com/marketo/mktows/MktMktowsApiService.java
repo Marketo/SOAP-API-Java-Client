@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "MktMktowsApiService", targetNamespace = "http://www.marketo.com/mktows/", wsdlLocation = "http://app.marketo.net/soap/mktows/2_3?WSDL")
+@WebServiceClient(name = "MktMktowsApiService", targetNamespace = "http://www.marketo.com/mktows/", wsdlLocation = "https://284-rpr-133.mktoapi.com/soap/mktows/2_7?WSDL")
 public class MktMktowsApiService
     extends Service
 {
@@ -30,9 +30,9 @@ public class MktMktowsApiService
         try {
             URL baseUrl;
             baseUrl = com.marketo.mktows.MktMktowsApiService.class.getResource(".");
-            url = new URL(baseUrl, "http://app.marketo.net/soap/mktows/2_3?WSDL");
+            url = new URL(baseUrl, "https://284-rpr-133.mktoapi.com/soap/mktows/2_7?WSDL");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'http://app.marketo.net/soap/mktows/2_3?WSDL', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: 'https://284-rpr-133.mktoapi.com/soap/mktows/2_7?WSDL', retrying as a local file");
             logger.warning(e.getMessage());
         }
         MKTMKTOWSAPISERVICE_WSDL_LOCATION = url;

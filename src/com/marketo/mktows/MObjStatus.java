@@ -38,7 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class MObjStatus {
 
-    protected int id;
+    @XmlElement(required = true, type = Integer.class, nillable = true)
+    protected Integer id;
     protected Attrib externalKey;
     @XmlElement(required = true)
     protected MObjStatusEnum status;
@@ -47,16 +48,24 @@ public class MObjStatus {
     /**
      * Gets the value of the id property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * Sets the value of the id property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setId(int value) {
+    public void setId(Integer value) {
         this.id = value;
     }
 

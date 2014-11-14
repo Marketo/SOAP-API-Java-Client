@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="winningLeadKeyList" type="{http://www.marketo.com/mktows/}ArrayOfAttribute"/>
  *         &lt;element name="losingLeadKeyLists" type="{http://www.marketo.com/mktows/}ArrayOfKeyList"/>
+ *         &lt;element name="mergeInSales" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,7 +32,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ParamsMergeLeads", propOrder = {
     "winningLeadKeyList",
-    "losingLeadKeyLists"
+    "losingLeadKeyLists",
+    "mergeInSales"
 })
 @XmlRootElement(name = "paramsMergeLeads")
 public class ParamsMergeLeads {
@@ -40,6 +42,7 @@ public class ParamsMergeLeads {
     protected ArrayOfAttribute winningLeadKeyList;
     @XmlElement(required = true)
     protected ArrayOfKeyList losingLeadKeyLists;
+    protected Boolean mergeInSales;
 
     /**
      * Gets the value of the winningLeadKeyList property.
@@ -87,6 +90,30 @@ public class ParamsMergeLeads {
      */
     public void setLosingLeadKeyLists(ArrayOfKeyList value) {
         this.losingLeadKeyLists = value;
+    }
+
+    /**
+     * Gets the value of the mergeInSales property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isMergeInSales() {
+        return mergeInSales;
+    }
+
+    /**
+     * Sets the value of the mergeInSales property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setMergeInSales(Boolean value) {
+        this.mergeInSales = value;
     }
 
 }

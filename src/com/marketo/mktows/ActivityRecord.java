@@ -21,7 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="activityDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
  *         &lt;element name="activityType" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="mktgAssetName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -56,7 +56,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class ActivityRecord {
 
-    protected int id;
+    protected long id;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar activityDateTime;
@@ -82,7 +82,7 @@ public class ActivityRecord {
      * Gets the value of the id property.
      * 
      */
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -90,7 +90,7 @@ public class ActivityRecord {
      * Sets the value of the id property.
      * 
      */
-    public void setId(int value) {
+    public void setId(long value) {
         this.id = value;
     }
 
